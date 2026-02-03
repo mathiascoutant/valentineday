@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --valentine-pink: #e91e63;
+  --valentine-rose: #f06292;
+  --valentine-dark: #880e4f;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse-heart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.heart-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.heart-float:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+.heart-float:nth-child(3n) {
+  animation-delay: 1s;
+}
+
+.heart-float:nth-child(5n) {
+  animation-delay: 1.5s;
+}
+
+.heart-float:nth-child(7n) {
+  animation-delay: 2s;
+}
+
+.message-appear {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.hearts-appear {
+  animation: pop-in 0.5s ease-out forwards;
+}
+
+/* Boutons Valentine */
+.btn-valentine-oui {
+  @apply w-full sm:w-auto min-w-[180px] sm:min-w-[200px] px-8 py-4 text-white font-bold text-lg sm:text-xl rounded-2xl shadow-lg cursor-pointer select-none touch-manipulation;
+  @apply bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600;
+  @apply hover:shadow-xl hover:shadow-pink-500/25 hover:-translate-y-0.5 active:translate-y-0;
+  @apply transition-all duration-200 ease-out;
+  @apply border-2 border-pink-400/50;
+}
+
+.btn-valentine-non {
+  @apply w-full sm:w-auto min-w-[180px] sm:min-w-[200px] px-8 py-4 text-slate-700 font-bold text-lg sm:text-xl rounded-2xl shadow-lg cursor-pointer select-none touch-manipulation;
+  @apply bg-gradient-to-b from-slate-100 to-slate-200 hover:from-slate-200 hover:to-slate-300;
+  @apply hover:shadow-xl hover:shadow-slate-400/20 hover:-translate-y-0.5 active:translate-y-0;
+  @apply transition-all duration-200 ease-out;
+  @apply border-2 border-slate-300;
+}
