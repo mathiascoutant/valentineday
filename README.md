@@ -5,20 +5,24 @@ Page Next.js responsive : demande à Jade d’être ta Valentine, avec bouton Ou
 ## Déploiement sur GitHub Pages
 
 1. **Crée un nouveau dépôt sur GitHub**
+
    - Va sur [github.com/new](https://github.com/new)
    - Nom du dépôt : **valentineday**
    - Public, sans README ni .gitignore
    - Crée le dépôt
 
 2. **Lie le projet et pousse le code**
+
    ```bash
    cd "/Users/mathias/Desktop/    /valentineday"
    git remote add origin https://github.com/TON_USERNAME/valentineday.git
    git push -u origin main
    ```
+
    Remplace `TON_USERNAME` par ton identifiant GitHub.
 
 3. **Active GitHub Pages**
+
    - Dans le dépôt : **Settings** → **Pages**
    - Sous **Build and deployment** : **Source** = **GitHub Actions**
    - Enregistre
