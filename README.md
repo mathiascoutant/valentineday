@@ -24,12 +24,12 @@ Page Next.js responsive : demande à Jade d’être ta Valentine, avec bouton Ou
 3. **Active GitHub Pages**
 
    - Dans le dépôt : **Settings** → **Pages**
-   - Sous **Build and deployment** : **Source** = **GitHub Actions**
-   - Enregistre
+   - Sous **Build and deployment** : **Source** = **Deploy from a branch**
+   - **Branch** : `gh-pages` — **Folder** : `/ (root)` → **Save**
 
 4. **Après le premier push**
-   - L’onglet **Actions** exécutera le workflow « Deploy to GitHub Pages »
-   - Une fois terminé, la page sera en ligne à :
+   - L’onglet **Actions** exécutera le workflow « Deploy to GitHub Pages » (il crée la branche `gh-pages`)
+   - Une fois le workflow terminé (icône verte), la page sera en ligne à :
    - **https://TON_USERNAME.github.io/valentineday/**
 
 ## En local
